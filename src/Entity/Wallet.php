@@ -9,8 +9,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Wallet
 {
-    static $table = 'wallet';
-
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()

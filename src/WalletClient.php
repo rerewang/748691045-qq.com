@@ -10,4 +10,9 @@ class WalletClient {
         $walletController = new WalletController();
         return $walletController->create();
     }
+
+    public function getWallet($id) {
+        $walletController = new WalletController($id);
+        return $walletController->get($id);
+    }
 }

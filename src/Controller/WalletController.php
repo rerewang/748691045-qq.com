@@ -7,7 +7,8 @@ use App\Foundation;
 
 class WalletController extends Foundation
 {
-    public function create() {
+    public function create()
+    {
         $wallet = new Wallet();
         $wallet->setBalance(1000);
 
@@ -15,5 +16,15 @@ class WalletController extends Foundation
         $this->db->flush();
 
         return $wallet;
+    }
+
+    /**
+     * @param $id
+     * @return Wallet|null
+     */
+    public function get($id)
+    {
+        $walletRepository = $this->db->getRepository(Wallet::class);
+        return $walletRepository->find($id);
     }
 }
