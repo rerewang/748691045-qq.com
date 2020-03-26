@@ -1,7 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 
-use Rere\Wallet\WalletClient;
+use App\WalletClient;
 
 //new WalletClient
 $client = new WalletClient();

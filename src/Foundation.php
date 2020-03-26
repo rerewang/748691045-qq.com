@@ -1,11 +1,11 @@
 <?php
 
-namespace Rere\Wallet;
+namespace App;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\ORM\EntityManager;
 use Pimple\Container;
-use Rere\Wallet\Provider\DoctrineOrmServiceProvider;
+use App\Provider\DoctrineOrmServiceProvider;
 
 defined('__SRC__') || define('__SRC__', dirname(__DIR__) . '/src');
 defined('__ROOT__') || define('__ROOT__', dirname(__DIR__));

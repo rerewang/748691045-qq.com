@@ -1,9 +1,9 @@
 <?php
 
-namespace Rere\Wallet\Controller;
+namespace App\Controller;
 
-use Rere\Wallet\Entity\Wallet;
-use Rere\Wallet\Foundation;
+use App\Entity\Wallet;
+use App\Foundation;
 
 class WalletController extends Foundation
 {

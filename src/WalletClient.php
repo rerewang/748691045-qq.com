@@ -1,8 +1,8 @@
 <?php
 
-namespace Rere\Wallet;
+namespace App;
 
-use Rere\Wallet\Controller\WalletController;
+use App\Controller\WalletController;
 
 class WalletClient {
 

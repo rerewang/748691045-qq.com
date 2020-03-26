@@ -1,6 +1,6 @@
 <?php
 
-namespace Rere\Wallet\Provider;
+namespace App\Provider;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
