@@ -21,17 +21,17 @@ class Wallet
      */
     private $balance;
 
-    public function getId(): ?int
+    public function getId()
     {
         return $this->id;
     }
 
-    public function getBalance(): ?int
+    public function getBalance()
     {
         return $this->balance;
     }
 
-    public function setBalance(int $balance): self
+    public function setBalance(int $balance)
     {
         $this->balance = $balance;
 

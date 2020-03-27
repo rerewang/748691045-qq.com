@@ -7,6 +7,11 @@ use App\Foundation;
 
 class WalletController extends Foundation
 {
+    /**
+     * @return Wallet
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
     public function create()
     {
         $wallet = new Wallet();
@@ -26,5 +31,16 @@ class WalletController extends Foundation
     {
         $walletRepository = $this->db->getRepository(Wallet::class);
         return $walletRepository->find($id);
+    }
+
+    public function updateBalance($id, $balance)
+    {
+        $walletRepository = $this->db->getRepository(Wallet::class);
+        $wallet = $walletRepository->find($id);
+
+        $wallet->setBalance($balance);
+        $this->db->flush();
+
+        return $wallet;
     }
 }

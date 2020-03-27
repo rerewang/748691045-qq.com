@@ -12,7 +12,12 @@ class WalletClient {
     }
 
     public function getWallet($id) {
-        $walletController = new WalletController($id);
+        $walletController = new WalletController();
         return $walletController->get($id);
+    }
+
+    public function updateBalance($id, $balance) {
+        $walletController = new WalletController();
+        return $walletController->updateBalance($id, $balance);
     }
 }

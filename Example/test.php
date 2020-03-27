@@ -14,4 +14,8 @@ $client = new WalletClient();
 //$wallet = $client->getWallet(1);
 //var_dump($wallet);
 
+//update wallet
+//$wallet = $client->updateBalance(1, 2000);
+//var_dump($wallet);
+
 
