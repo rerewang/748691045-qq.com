@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace Rcomponent\Wallet;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\ORM\EntityManager;
 use Pimple\Container;
-use App\Provider\DoctrineOrmServiceProvider;
+use Rcomponent\Wallet\Provider\DoctrineOrmServiceProvider;
 
 defined('__SRC__') || define('__SRC__', dirname(__DIR__) . '/src');
 defined('__ROOT__') || define('__ROOT__', dirname(__DIR__));
@@ -21,7 +21,7 @@ class Foundation
     /**
      * @var EntityManager
      */
-    public $db;
+    public $entityManager;
 
     public function __construct()
     {
@@ -29,7 +29,7 @@ class Foundation
         $this->setProviders();
         $this->registerProviders();
 
-        $this->db = $this->container->offsetGet('db');
+        $this->entityManager = $this->container->offsetGet('entityManager');
     }
 
     private function setProviders()

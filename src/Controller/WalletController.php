@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controller;
+namespace Rcomponent\Wallet\Controller;
 
-use App\Entity\Wallet;
-use App\Foundation;
+use Rcomponent\Wallet\Entity\Wallet;
+use Rcomponent\Wallet\Foundation;
 
 class WalletController extends Foundation
 {
@@ -17,8 +17,8 @@ class WalletController extends Foundation
         $wallet = new Wallet();
         $wallet->setBalance(1000);
 
-        $this->db->persist($wallet);
-        $this->db->flush();
+        $this->entityManager->persist($wallet);
+        $this->entityManager->flush();
 
         return $wallet;
     }
@@ -29,17 +29,17 @@ class WalletController extends Foundation
      */
     public function get($id)
     {
-        $walletRepository = $this->db->getRepository(Wallet::class);
+        $walletRepository = $this->entityManager->getRepository(Wallet::class);
         return $walletRepository->find($id);
     }
 
     public function updateBalance($id, $balance)
     {
-        $walletRepository = $this->db->getRepository(Wallet::class);
+        $walletRepository = $this->entityManager->getRepository(Wallet::class);
         $wallet = $walletRepository->find($id);
 
         $wallet->setBalance($balance);
-        $this->db->flush();
+        $this->entityManager->flush();
 
         return $wallet;
     }

@@ -1,12 +1,11 @@
 {
     "require": {
         "pimple/pimple": "^3.0",
-        "doctrine/orm": "^2.6.2",
-        "symfony/yaml": "5.*"
+        "doctrine/orm": "^2.5.0"
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "Rcomponent\\Wallet\\": "src/"
         }
     },
     "require-dev": {

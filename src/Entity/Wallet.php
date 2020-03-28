@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Entity;
+namespace Rcomponent\Wallet\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\WalletRepository")
+ * @ORM\Entity(repositoryClass="Rcomponent\Wallet\Repository\WalletRepository")
  */
 class Wallet
 {

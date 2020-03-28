@@ -1,8 +1,8 @@
 <?php
 
-namespace App;
+namespace Rcomponent\Wallet;
 
-use App\Controller\WalletController;
+use Rcomponent\Wallet\Controller\WalletController;
 
 class WalletClient {
 

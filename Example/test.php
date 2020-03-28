@@ -1,7 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 
-use App\WalletClient;
+use Rcomponent\Wallet\WalletClient;
 
 //new WalletClient
 $client = new WalletClient();

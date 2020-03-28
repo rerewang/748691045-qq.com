@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Provider;
+namespace Rcomponent\Wallet\Provider;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
@@ -87,7 +87,7 @@ class DoctrineOrmServiceProvider implements ServiceProviderInterface
             );
         };
 
-        $app['db'] = function ( $app ) {
+        $app['entityManager'] = function ( $app ) {
             $conn = $app['doctrine.connection'];
             return EntityManager::create( $conn, $app['doctrine.config'], $conn->getEventManager() );
         };

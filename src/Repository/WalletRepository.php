@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repository;
+namespace Rcomponent\Wallet\Repository;
 
-use App\Entity\Wallet;
+use Rcomponent\Wallet\Entity\Wallet;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityRepository;
 
