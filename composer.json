@@ -1,4 +1,13 @@
 {
+    "name": "rcomponent/wallet",
+    "type": "library",
+    "keywords":["wallet"],
+    "authors": [
+        {
+            "name": "rere wang",
+            "email": "rere22.wang@gmail.com"
+        }
+    ],
     "require": {
         "pimple/pimple": "^3.0",
         "doctrine/orm": "^2.5.0"
